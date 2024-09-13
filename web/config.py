@@ -147,12 +147,12 @@ STRICT_TRANSPORT_SECURITY = "max-age=31536000; includeSubDomains"
 # content type instead of trying to detect it, which can be abused to
 # generate a cross-site scripting (XSS) attack.
 # e.g. nosniff
-X_CONTENT_TYPE_OPTIONS = "nosniff"
+X_CONTENT_TYPE_OPTIONS = ""
 
 # The browser will try to prevent reflected XSS attacks by not loading the
 # page if the request contains something that looks like JavaScript and the
 # response contains the same data. e.g. '1; mode=block'
-X_XSS_PROTECTION = "1; mode=block"
+X_XSS_PROTECTION = "0; mode=block"
 
 # This param is used to validate ALLOWED_HOSTS for the application
 # This will be used to avoid Host Header Injection attack
@@ -619,7 +619,7 @@ MASTER_PASSWORD_HOOK = None
 # address hosting environments, such as Kubernetes or behind load
 # balancers. In such cases, this option should be set to False.
 ##########################################################################
-ENHANCED_COOKIE_PROTECTION = True
+ENHANCED_COOKIE_PROTECTION = False
 
 ##########################################################################
 # External Authentication Sources
