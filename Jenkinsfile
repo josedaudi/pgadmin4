@@ -15,14 +15,6 @@ pipeline {
             }
         }
 
-//         stage("Install Dependencies") {
-//             steps{
-//                 script {
-//                     installPIPRequirements 'requirements.txt'
-//                 }
-//             }
-//         }
-
         stage("Build Docker Image") {
             steps{
                 script {
