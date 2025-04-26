@@ -29,7 +29,8 @@ RUN apk add --no-cache \
     nodejs \
     npm \
     yarn \
-    zlib-dev
+    zlib-dev \
+    lz4-libs
 
 COPY .git .git
 # Create the /pgadmin4 directory and copy the source into it. Explicitly
