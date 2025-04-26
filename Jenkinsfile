@@ -18,7 +18,7 @@ pipeline {
         stage("Build Docker Image") {
             steps{
                 script {
-                    buildDockerImage "nexus.encipher.io:8083/sphere-link-africa-pgadmin4:$env.BUILD_NUMBER"
+                    buildDockerImage "nexus.sphere.tz/sphere-link-africa-pgadmin4:$env.BUILD_NUMBER"
                 }
             }
         }
@@ -26,8 +26,8 @@ pipeline {
         stage("Push Docker Image to Nexus") {
             steps{
                 script {
-                    dockerLogin 'nexus.encipher.io:8083'
-                    pushDockerImage "nexus.encipher.io:8083/sphere-link-africa-pgadmin4:$env.BUILD_NUMBER"
+                    dockerLogin 'nexus.sphere.tz'
+                    pushDockerImage "nexus.sphere.tz/sphere-link-africa-pgadmin4:$env.BUILD_NUMBER"
                 }
             }
         }
